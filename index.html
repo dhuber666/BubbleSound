@@ -203,6 +203,13 @@
             {
                 circles[i].fillColor.hue += 1;
                 circles[i].scale(.90);
+                if(circles[i].area < 1) 
+                {
+                    circles[i].remove();
+                    circles.splice(i, 1);
+                    i--;
+                    console.log(circles);
+                }
 
             }
         }
